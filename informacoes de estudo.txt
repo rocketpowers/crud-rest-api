@@ -1,0 +1,9 @@
+aprimorando os conceitos de crud e anotations
+
+ainda problema com lombok
+
+
+get-post-del funcionado, vou implementar um put ainda
+
+
+vou evoluir para um banco tambem
