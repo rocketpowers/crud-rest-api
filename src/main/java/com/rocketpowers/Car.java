@@ -11,18 +11,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Car {
 	
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	Long id;
-	String marca;
-	String modelo;
-	Integer ano;
 	public Long getId() {
 		return id;
 	}
@@ -47,6 +38,14 @@ public class Car {
 	public void setAno(Integer ano) {
 		this.ano = ano;
 	}
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	Long id;
+	String marca;
+	String modelo;
+	Integer ano;
+	
+	
 	
 	
 	

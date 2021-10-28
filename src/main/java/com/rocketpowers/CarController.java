@@ -7,13 +7,16 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 
 @RestController
 @AllArgsConstructor
+@Data
 public class CarController {
 	
 	
@@ -37,16 +40,17 @@ public class CarController {
 		return repository.save(car);
 	}
 	
+	
 	@DeleteMapping("/car/{id}")
 	public void deleteCar(@PathVariable Long id) {
 		repository.deleteById(id);
 	}
 	
 	
-	// @PutMapping
-	//    publ updateJornada(@RequestBody JornadaTrabalho jornadaTrabalho){
-	   //     return jornadaService.updateJornada(jornadaTrabalho);
-	  //  }
+	 @PutMapping("/car")
+	    public Car updateCar(@RequestBody Car car){
+	        return repository.save(car);
+	    }
 	
 	
 }
